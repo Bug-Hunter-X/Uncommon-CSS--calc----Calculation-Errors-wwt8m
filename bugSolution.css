@@ -1,0 +1,26 @@
+/* Solution: Correcting calc() usage */
+
+/* Fix inconsistent units: */
+.container {
+  width: calc(100vw - 20px); /* Use consistent units (vw) */
+}
+
+/* Fix missing or incorrect parentheses in nested calc(): */
+.element {
+  width: calc(50% - calc(10px + 5%)); /* Correct parentheses */
+}
+
+/* Handle unexpected flexbox behavior: ensure the container has a defined width */
+.flex-container {
+  display: flex;
+  width: 80%; /* Define a width for the container */
+}
+.flex-item {
+  width: calc(50% - 10px);
+}
+
+/* Alternative approach: avoid calc() if possible */
+.another-element {
+  width: 480px; /* Direct width instead of calculation */
+}
+/* Add other solutions as needed */
